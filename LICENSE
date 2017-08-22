@@ -199,3 +199,6 @@
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+
+Logic is based on the ArnoldC language, which can be found here. https://github.com/lhartikk/ArnoldC
+The programming behind it is mostly the same, with some syntax changes. 
