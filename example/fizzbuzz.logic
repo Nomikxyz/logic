@@ -1,0 +1,87 @@
+begin
+
+create a number variable isLessThan100
+assign initial value @true
+create a number variable n
+assign initial value 0
+create a number variable multiple
+assign initial value @true
+
+while isLessThan100
+  open assignment dialog n
+  assigning new value to n
+  add 1
+  close assignment dialog
+
+  open assignment dialog isLessThan100
+  assigning new value to 100
+  greater than n
+  close assignment dialog
+
+  assign variable from method call multiple
+  call divisible n 15
+  if multiple
+    say "FizzBuzz"
+  else
+    assign variable from method call multiple
+    call divisible n 3
+    if multiple
+      say "Fizz"
+    else
+      assign variable from method call multiple
+      call divisible n 5
+      if multiple
+        say "Buzz"
+      else
+        say n
+      end if
+    end if
+  end if
+end while
+
+end of line
+
+create method mod
+method parameters dividend
+method parameters divisor
+non void
+create a number variable quotient
+assign initial value 0
+create a number variable remainder
+assign initial value 0
+create a number variable product
+assign initial value 0
+open assignment dialog quotient
+assigning new value to  dividend
+divide divisor
+close assignment dialog
+open assignment dialog product
+assigning new value to  divisor
+multiply quotient
+close assignment dialog
+open assignment dialog remainder
+assigning new value to  dividend
+subtract product
+close assignment dialog
+return remainder
+end method creation
+
+create method divisible
+  method parameters dividend
+  method parameters divisor
+  non void
+
+  create a number variable result
+  assign initial value 0
+  assign variable from method call result
+  call mod dividend divisor
+
+  create a number variable isZero
+  assign initial value 0
+  open assignment dialog isZero
+  assigning new value to  result
+  equal to 0
+  close assignment dialog
+
+  return isZero
+end method creation
